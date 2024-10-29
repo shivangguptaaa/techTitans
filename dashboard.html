@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="logo">
+                <h2><a href="dashboard.html" class="logo" style="text-decoration: none;">R.E.A.L.M.<span class="grey-box"></span></a></h2>
+            </div>
+            <ul class="menu">
+                <li class="active"><i class="fas fa-home"></i> Dashboard</li>
+                <li><i class="fas fa-book"></i> Courses</li>
+                <li><i class="fas fa-comments"></i> Chat</li>
+                <li><i class="fas fa-graduation-cap"></i> Grades</li>
+                <li><i class="fas fa-calendar-alt"></i> Schedule</li>
+                <li><i class="fas fa-cog"></i> Settings</li>
+                <li><form action="logout.php" method="post">
+                    <br/><button type="submit">Logout</button>
+                </form></li>
+            </ul>
+        </aside>
+
+        <main class="main-content">
+            <header class="header">
+                <h2>Hello User 👋</h2>
+                <p>Let's learn something new today!</p>
+                <input type="text" placeholder="Search">
+                <div class="profile">
+                    <img src="img/profile.jpg" alt="profile image">
+                </div>
+            </header>
+
+            <section class="overview">
+                <div class="overview-card">
+                    <h3><i class="fas fa-spinner"></i> Course in Progress</h3>
+                    <p>18</p>
+                </div>
+                <div class="overview-card">
+                    <h3><i class="fas fa-check"></i> Course Completed</h3>
+                    <p>23</p>
+                </div>
+                <div class="overview-card">
+                    <h3><i class="fas fa-certificate"></i> Certificates Earned</h3>
+                    <p>15</p>
+                </div>
+                <div class="overview-card">
+                    <h3><i class="fas fa-hands-helping"></i> Community Support</h3>
+                    <p>87</p>
+                </div>
+            </section>
+
+            <section class="stats">
+                <div class="chart-container">
+                    <h3>Actively Hours</h3>
+                    <canvas id="hoursChart"></canvas>
+                </div>
+                <div class="performance">
+                    <h3>Performance</h3>
+                    <p>Your productivity is 40% higher than last month</p>
+                    <canvas id="performanceChart"></canvas>
+                </div>
+            </section>
+
+            <section class="assignments">
+                <h3>My Assignments</h3>
+                <ul>
+                    <li>
+                        <span>Typography Test</span>
+                        <span>180/200</span>
+                        <span>Completed</span>
+                    </li>
+                    <li>
+                        <span>Inclusive Design Test</span>
+                        <span>160/200</span>
+                        <span>Completed</span>
+                    </li>
+                    <li>
+                        <span>Drawing Test</span>
+                        <span>Upcoming</span>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="upcoming-events">
+                <h3>Upcoming Events</h3>
+                <ul>
+                    <li>Team Meetup</li>
+                    <li>Illustration</li>
+                    <li>Research</li>
+                    <li>Presentation</li>
+                </ul>
+            </section>
+        </main>
+    </div>
+
+    <script src="dashboard.js"></script>
+    <canvas id="hoursChart"></canvas>
+    <canvas id="performanceChart"></canvas>
+
+</body>
+</html>
